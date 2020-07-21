@@ -180,3 +180,75 @@ def toplamAl2(num1, num2):
 print("5 + 7 =", toplamAl1(5,7))
 print("6 + 17 =", toplamAl2(6,17))
 
+# Yerel ve Global Değişkenler
+
+"""
+    Bir fonksiyonun içinde tanımlanan bir değişken, yerel  bir etki alanına sahip olur.
+    Yani sadece o fonksiyonun içinde ve alt fonksiyonlarda etkisini sürdürür.
+    Fonksiyon etki alanının dışına çıktığında o değişken tanımsız hale gelir.
+    
+    Sınıflardaki katılım etkisi yerel değişkenler için de geçerlidir.
+    Ana fonksiyonda tanımlanan bir değişken, alt fonksiyonlarda ( yavru fonksiyonlarda da) aynen
+    tanınır. Ancak tersi doğru değildir. Yani alt (yavru) fonksiyonda tanımlanan bir yerel değişken ana (üst)
+    kademeler için tanımsızdır.
+"""
+
+# Örnek Kod:
+
+# s = "Fonksiyonun dışında tanımlı"
+#
+# def AnaFunction():
+#     s1 = "s1 Fonksiyonun içinde tanımlı"
+#     print("AnaFunction fonksiyonunun içi")
+#     def YavruFunction():
+#         s2 = "YavruFunction fonksiyonunun içi"
+#         print("YavruFunction s = ", s)
+#         print("YavruFunction s1 = ", s1)
+#         print("YavruFunction s2 = ", s2)
+#         print("-"*50)
+#     YavruFunction()
+#     print("AnaFunction s =", s)
+#     print("AnaFunction s1 =", s1)
+#     #print("AnaFunction s2 =", s2) #--> Bu satır hata verir
+
+
+
+#AnaFunction()
+
+#print("YavruFunction s=", s)
+# print("YavruFunction s1=", s1) #--> Bu satır hata verir
+# print("YavruFunction s2=", s2) #--> Bu satır hata verir
+
+
+# global değişkeni kullanımı ile yukarıdaki örnekte alınan hatadan kurtulma.
+
+s = "Fonksiyonun dışında tanımlı"
+
+def AnaFunction1():
+    global s1
+    s1 = "s1 Fonksiyonun içinde tanımlı"
+    print("AnaFunction1 fonksiyonunun içi")
+    def YavruFunction():
+        global s2
+        s2 = "YavruFunction fonksiyonunun içi"
+        print("YavruFunction s = ", s)
+        print("YavruFunction s1 = ", s1)
+        print("YavruFunction s2 = ", s2)
+        print("-"*50)
+    YavruFunction()
+    print("AnaFunction s =", s)
+    print("AnaFunction s1 =", s1)
+    #print("AnaFunction s2 =", s2) #--> Bu satır hata verir
+
+
+
+AnaFunction1()
+
+print("YavruFunction s=", s)
+print("YavruFunction s1=", s1) #--> Bu satır hata verir
+print("YavruFunction s2=", s2) #--> Bu satır hata verir
+
+
+
+
+
