@@ -131,3 +131,52 @@ def kim(ad, kent, *ozellikler):
 
 kim("Hale", "Antalya", "Esmer", "Siyah saçlı", "Ela Gözlü")
 
+# Lambda Fonksiyonları
+
+"""
+    Standart def anahtar kelimesinin kullanılmadığı bazı küçük boyutlu fonksiyonlar
+    anonim fonksiyonlar olarak adlandırılır. Bunları tanımlarken lambda anahtar sözcüğü kullanılır
+    
+    Lambda fonksiyonları yerel veya global değişkenlere ulaşamaz.
+    Sadece kendi ve argüman listesindeki elemanları kullanır.
+    
+    Lambda fonksiyonlarını "tek satırlık fonksiyonlar" gibi düşünebiliriz.
+    
+    Bu fonksiyonların temel yapısı şu şekildedir.
+    
+    lambda [arg1, arg2, arg3, ...] : ifade
+"""
+
+topla = lambda arg1, arg2: arg1 + arg2
+
+carp = lambda arg1, arg2, arg3: arg1 * arg2 * arg3
+
+import math
+
+hipotenus = lambda kenar1, kenar2: math.sqrt(kenar1 * kenar1 + kenar2 * kenar2)
+
+print(topla(12, 27))
+print(carp(11, 13, 17))
+print(hipotenus(3, 4))
+
+
+# return
+"""
+    Bir fonksiyon None değeri döndürdüğü gibi başka değer veya nesneler de döndürebilir.
+    Fonksiyonun ne döndüreceği return anahtar kelimesiyle belirtilir.
+    Bir değer veya nesne döndürmek, aynı zamanda o fonksiyon çağrısını sonlandırmak anlamına gelir.
+"""
+
+
+def toplamAl1(num1, num2):
+    toplam = num1 + num2
+    # işlem sonucunu bir değişkene aktar ve onu döndür
+    return toplam
+
+
+def toplamAl2(num1, num2):
+    # doğrudan işlem sonucunu döndürür
+    return num1 + num2
+print("5 + 7 =", toplamAl1(5,7))
+print("6 + 17 =", toplamAl2(6,17))
+
