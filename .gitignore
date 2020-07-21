@@ -1,2 +1,11 @@
 # Project exclude paths
 /venv/
+/.idea/.gitignore
+/book-001.ipynb
+/.ipynb_checkpoints/book-001-checkpoint.ipynb
+/config.py
+/.idea/Introduction.iml
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/inspectionProfiles/profiles_settings.xml
+/.idea/vcs.xml
