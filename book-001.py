@@ -195,5 +195,66 @@ print(notlar['emre'])
 del notlar['neriman'] # neriman olan eleman siliniyor.
 print(notlar)
 
-# Değişkenler
+# Operatörler
 
+# Operatör  | İşlev
+# +         | Toplama
+# -         | Çıkarma
+# *         | Çarpma
+# /         | Bölme
+# //        | Tam sayı bölme
+# **        | Üs alma
+# %         | Kalanı hesaplama
+
+# İkili İşlem Operatörleri
+
+# Operatör  | İşlev
+# <<        | Sola 1 bit kaydırma
+# >>        | Sağa 1 bit kaydırma
+# &         | AND
+# |         | OR
+# ^         | XOR
+# ~         | NOT
+
+# Kıyaslama Operatörleri
+# Operatör  | İşlev
+# <         | Küçüktür
+# >         | Büyüktür
+# <=        | Küçük veya eşit
+# >=        | Büyük veya eşit
+# ==        | Eşit
+# !=        | Eşit değil
+# is        | Değer ve ID eşitliği
+# in        | Mevcut
+
+# Atama Operatörleri
+# Operatör  | İşlev
+# +=        | Artırarak ata
+# -=        | Eksilterek ata
+# *=        | Çarparak ata
+# /=        | Bölerek ata
+# **=       | Üs alarak ata
+# //=       | Tamsayı bölerek ata
+# %=        | Kalanı hesaplayarak ata
+# <<=       | Sola kaydırarak ata
+# >>=       | Sağa kaydırarak ata
+# &=        | AND uygulayarak ata
+# |=        | OR uygulayarak ata
+# ^=        | XOR uygulayarak ata
+
+# Operatörlerin öncelik sıralaması
+
+# Öncelik   |   Operatör            |   İşlev
+# 1         |   OR                  |   Mantıksal OR
+# 2         |   AND                 |   Mantıksal AND
+# 3         |   NOT                 |   Mantıksal NOT
+# 4         | <,<=,>,>=,==,!=,is,in |   Kıyaslamalar
+# 5         | |                     |   İkilik OR
+# 6         | ^                     |   İkilik XOR
+# 7         | &                     |   İkilik AND
+# 8         | <<,>>                 |   İkilik sola ve sağa kaydırma
+# 9         | +, -                  |   Toplama, çıkarma
+# 10        | *,/,//,%              |   Çarpma, bölme, kalan
+# 11        | +x, -x, ~x            |   Birli (unary) işlemler
+# 12        | **                    |   Üs alma
+# 13        | ()                    |   Parantez
